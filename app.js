@@ -1,3 +1,4 @@
+var PORT = process.env.PORT || 3000;
 var express = require('express');
 var app = express();
 
@@ -12,6 +13,6 @@ require("./model/Notes")
 app.use( bodyParser.json() ); 
 app.use("/", router);
 
-app.listen(3000, function() {
+app.listen(PORT, function() {
     console.log('note-app is listening on port 3000')
 });
